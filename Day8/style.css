@@ -1,0 +1,30 @@
+h2{
+    background-color:brown;
+    border: 2px solid greenyellow;
+    color: aquamarine;
+}
+
+.about{
+    color: blanchedalmond;
+    background-color: firebrick;
+}
+.projects{
+    color: goldenrod;
+    background-color: orangered;
+}
+h1{
+    color: chocolate;
+    font-size:larger;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+#main{
+    color: blueviolet;
+    border: 20px;
+    background-color: yellow;
+}
+
+#class{
+    color:violet ;
+    background-color: black;
+}
+
