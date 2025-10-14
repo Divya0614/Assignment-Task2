@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing Experiment</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 20px;
+            margin: 40px;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border: 10px solid teal;
+            background-color: lightblue;
+        }
+
+       
+        .content-box {
+            box-sizing: content-box;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+        }
+
+        p {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box content-box">
+            <p>content-box</p>
+        </div>
+        <div class="box border-box">
+            <p>border-box</p>
+        </div>
+    </div>
+
+</body>
+</html>
