@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3-Box Flexbox Layout</title>
+<style>
+ 
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #af7373;
+  }
+
+  
+  .container {
+    display: flex;              
+    justify-content: space-around; 
+    align-items: center;        
+    flex-wrap: wrap;            
+    padding: 20px;
+    min-height: 100vh;
+  }
+
+  
+  .box {
+    background-color: #4da6ff;
+    color: white;
+    padding: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;                    
+    min-width: 200px;           
+    max-width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .box h2 {
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <h2>Box 1</h2>
+      <p>This is the first box.</p>
+    </div>
+    <div class="box">
+      <h2>Box 2</h2>
+      <p>This is the second box.</p>
+    </div>
+    <div class="box">
+      <h2>Box 3</h2>
+      <p>This is the third box.</p>
+    </div>
+  </div>
+</body>
+</html>

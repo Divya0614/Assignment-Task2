@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Button Alignment</title>
+ <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: darkturquoise;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly; 
+  align-items: center; 
+  height: 10vh; 
+}
+
+button {
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+h1{
+    text-align: center;
+}
+
+ </style>
+</head>
+<body>
+    <h1>Hi, This is my website</h1>
+  <div class="button-container">
+    <button>Home</button>
+    <button>About</button>
+    <button>Services</button>
+    <button>Contact</button>
+  </div>
+</body>
+</html>

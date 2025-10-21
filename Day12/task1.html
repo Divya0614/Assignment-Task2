@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Properties</title>
+    <style>
+        body{
+            background-color: rgb(209, 144, 65);
+        }
+        .box{
+            background-color: slategrey;
+            border: 2px solid blueviolet;
+            padding: 10px;
+            margin: 10px;
+        }
+        .block{
+            display: block;
+        }
+        .inline{
+            display: inline;
+        }
+        .inline-block{
+            display: inline-block;
+        }
+        .none{
+            display: none;
+        }
+        .flex-conatinet{
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+            border: 1px dashed yellow;
+           
+
+        }
+        .flex-item{
+            display: flexbox;
+            background-color: springgreen;
+            padding: 10px;
+            border: 1px dashed brown;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Display Properties in CSS</h1>
+    <h4>Display:Block</h4>
+    <div class="box block">Block takes full width</div>
+    <div class="box block">It starts on a new line</div>
+
+    <h4>Display:Inline</h4>
+    <div class="box inline">it takes as much of width it needed</div>
+    <div class="box inline">It does not starts on a new line</div>
+
+    <h4>Display:Inline-Block</h4>
+    <div class="box inline-block">Box 1</div>
+    <div class="box inline-block">Box 2</div>
+    <div class="box inline-block">Box 3</div>
+
+    <h4>Display:None </h4>
+    <div class="box none">Hidden element</div>
+    <p>This message will be hidden</p>
+
+    <h4>Display:Flex</h4>
+    <div class="flex-container"></div>
+    <div class="flex-item">Flex 1</div>
+    <div class="flex-item">Flex 2</div>
+    <div class="flex-item">Flex 2</div>
+
+</body>
+
+</html>

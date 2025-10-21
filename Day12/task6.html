@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive 3-Column Layout (Flexbox)</title>
+<style>
+    body{
+        background-color: steelblue;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .column{
+        background-color: royalblue;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        flex: 1;
+        min-width: 250px;
+        box-shadow: 0 4px 10px red;
+    }
+    .column h2{
+        margin-bottom: 10px;
+    }
+    @media (max-width:800px){
+        .container{
+            flex-direction: column;
+            align-items: center;
+        }
+        .column{
+            width: 90%;
+        }
+    }
+</style>
+</head>
+<body>
+
+  <h2 style="text-align:center;">Responsive 3-Column Layout using Flexbox</h2>
+
+  <div class="container">
+    <div class="column">
+      <h2>Column 1</h2>
+      <p>Content for the first column.</p>
+    </div>
+
+    <div class="column">
+      <h2>Column 2</h2>
+      <p>Content for the second column.</p>
+    </div>
+
+    <div class="column">
+      <h2>Column 3</h2>
+      <p>Content for the third column.</p>
+    </div>
+  </div>
+
+</body>
+</html>
