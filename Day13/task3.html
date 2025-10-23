@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em and rem</title>
+    <style>
+        html{
+            font-size: 16px;
+        }
+        body{
+            background-color: darkmagenta;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 20px;
+        }
+        h1{
+            font-size: 2rem;
+        }
+        .parent{
+            font-size: 1em;
+            background-color: purple;
+            padding: 15px;
+            margin: 20px;
+        }
+        .child-em{
+            font-size: 5em;
+            color: whitesmoke;
+        }
+        .child-rem{
+            font-size: 6rem;
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>em and rem Example</h1>
+    <p>CSS units</p>
+    <div class="parent">
+        <p class="child-em">Relative to the font size of the element</p>
+        <p class="child-rem">Relative to the font size of the root element</p>
+    </div>
+</body>
+</html>

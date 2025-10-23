@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+
+        }
+        body{
+            background-color: sandybrown;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30px;
+            margin: 0;
+            padding: 30px;
+        }
+        .container{
+            display: flex;
+            gap: 30px;
+        }
+        .column{
+            background-color: lightyellow;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(rgb(168, 94, 94), rgb(81, 162, 81), blue, alpha);
+           flex: 1;
+        }
+        @media (max-width:600px) {
+            .conainer{
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Two column layout</h1>
+    <div class="container">
+        <div class="column">
+            <h2>column 1</h2>
+            <p>This is the first column</p>
+        </div>
+        <div class="column">
+            <h2>column 2</h2>
+            <p>This is the second column</p>
+        </div>
+    </div>
+</body>
+</html>
