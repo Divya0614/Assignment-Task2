@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 1px;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            background-color: rgb(242, 243, 236);
+            text-align: center;
+        }
+
+        header {
+            height: 20vh;
+            background: linear-gradient(rgb(217, 123, 123));
+            color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 30px;
+            text-align: center;
+
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            gap: 15px;
+
+        }
+
+        .projects {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .projects h3 {
+            font-size: 20px;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .myprojects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            background-color: rgb(125, 180, 150);
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 4px 10px whitesmoke;
+
+        }
+
+        .project:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 8px 20px rgb(176, 176, 195);
+        }
+
+        .project p {
+            color: rgb(7, 7, 7);
+
+        }
+
+        .contact {
+            background-color: rgb(133, 159, 219);
+            color: white;
+            padding: 0;
+            text-align: center;
+        }
+
+        .contact h2 {
+            margin-top: 16px;
+            font-size: 25px;
+        }
+
+        .contact p {
+            font-size: 16px;
+            margin: 8px 0;
+        }
+
+        footer {
+            font-size: 16px;
+            text-align: center;
+            padding: 16px;
+            color: black;
+        }
+
+        @media (max-width: 900px) {
+            header h1 {
+                font-size: 35px;
+            }
+
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 32px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <h2>DivyaM</h2>
+        <h3>Developer | Life long learner</h3>
+        <hr>
+    </header>
+
+    <section class="about">
+        <div class="about-me">
+            <h2>About Me</h2>
+            <p>Im a passionate Developer with a Strong Interest in Web designing</p>
+        </div>
+
+    </section>
+    <hr>
+    <hr>
+
+    <section class="projects">
+        <h2>My Projects</h2>
+        <div class="myprojects">
+            <div class="project">
+                <h3>Online Shopping Management System</h3>
+                <p>Fully responsive e-commerce site with products, filters , cart and user login info</p>
+
+            </div>
+            <div class="project">
+                <h3>Skin Cancer Detection</h3>
+                <p>AI powered CNN model for skin disease classification with a user friendly interface</p>
+
+            </div>
+            <div class="project">
+                <h3>Smart Chat Assistant</h3>
+                <p>Interactive chat app using Ai for real time communication</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <h2>Get in Touch</h2>
+        <p>Email: <a href="mailto:divyam0601@gmail.com">Mail</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/divya">LinkedIn</a></p>
+        <p>Github: <a href="https://github.com/divya0614">Github</a></p>
+    </section>
+    <footer>
+        &copy; 2025 Divya M | All Rights are reserved
+    </footer>
+</body>
+
+</html>

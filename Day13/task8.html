@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: lightblue;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+           
+        }
+        nav{
+            background-color: rgb(127, 101, 223);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            color: black;
+            flex-wrap: wrap;
+        
+        }
+        .logo{
+            font-size: 16px;
+            color: saddlebrown;
+        }
+        .nav-links a {
+            color: thistle;
+            transition: red 10s;
+
+        }
+        .nav-links a:hover{
+            color: yellow;
+        }
+
+        @media (max-width: 700px){
+            nav{
+                flex-direction: column;
+                align-items: flex-start;
+
+            }
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+            }
+            .nav-links a{
+                padding: 10px 0;
+                border-top: 1px solid burlywood;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Divya M</div>
+        <div class="nav-links"></div>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </nav>
+    <section style="padding: 30px; text-align: center;">
+        <h1>Nav Bar Example</h1>
+        <p>Hi , all THis is my wesite</p>
+    </section>
+</body>
+</html>

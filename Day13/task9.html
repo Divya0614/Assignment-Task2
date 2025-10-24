@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em/rem</title>
+    <style>
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            background-color: wheat;
+            color: black;
+            padding: 2rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: rgb(73, 73, 4);
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: tomato;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6em;
+            margin-top: 1em;
+        }
+
+        @media (max-width: 900px) {
+            html {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            html {
+                font-size: 2rem;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Adjust font size</h1>
+    <h2>Lorem, ipsum dolor.</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, cum cumque quibusdam, temporibus odio est quis
+        quo consectetur quaerat sint doloremque dolores, numquam nihil esse!</p>
+
+</body>
+
+</html>
