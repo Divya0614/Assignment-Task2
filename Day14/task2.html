@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: burlywood;
+            font-family: cursive;
+        }
+        .moving{
+            font-size: 15px;
+            color: wheat;
+            background-color: royalblue;
+            padding: 15px 20px;
+            border-radius: 10px;
+            animation: slideright 4s infinite alternate ease-in-out;
+
+        }
+        @keyframes slideright {
+            0% {
+                transform: translateX(-60px);
+            }
+            50%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(100px);
+            }
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="moving">Hi all, Welcome</div>
+</body>
+</html>
