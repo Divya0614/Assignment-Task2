@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Favourite color</h2>
+    <p id="message"></p>
+    <script>
+        let color = prompt("What is your Favourite color?");
+        switch (color.toLowerCase()) {
+            case "red":
+                document.getElementById("message").textContent = "Red";
+                break;
+            case "blue":
+                document.getElementById("message").textContent = "Blue";
+                break;
+            case "green":
+                document.getElementById("message").textContent = "green";
+                break;
+            case "yellow":
+                document.getElementById("message").textContent = "yellow";
+                break;
+            case "pink":
+                document.getElementById("message").textContent = "pink";
+                break;
+            case "violet":
+                document.getElementById("message").textContent = "violet";
+                break;
+            default:
+                document.getElementById("message").textContent = "Enter ur favourite color";
+
+
+
+        }
+    </script>
+</body>
+
+</html>

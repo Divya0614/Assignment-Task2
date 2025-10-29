@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiple Conditions Check</title>
+</head>
+<body>
+  <h2>User Access Check</h2>
+
+  <label>Age: </label>
+  <input type="number" id="age" placeholder="Enter your age"><br><br>
+
+  <label>Subscribed: </label>
+  <select id="subscribed">
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+  </select><br><br>
+
+  <button onclick="checkAccess()">Check Access</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkAccess() {
+      let age = document.getElementById("age").value;
+      let subscribed = document.getElementById("subscribed").value;
+      let result = document.getElementById("result");
+
+      if (age >= 18 && subscribed === "yes") {
+        result.textContent = " Welcome!";
+        
+      } else {
+        result.textContent = " Access denied.";
+        
+      }
+    }
+  </script>
+</body>
+</html>

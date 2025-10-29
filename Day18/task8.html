@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H2>Check if your passwor</H2>
+    <input type="password" id="password" placeholder="Enter your password">
+    <button onclick="checkpassword()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkpassword() {
+            let password = document.getElementById("password").value;
+            let result = document.getElementById("result");
+
+            if (password.length >=8) {
+                result.textContent ="Yor password is secure";
+                
+            }else{
+                result.textContent ="Your password is too short.It must be atleast 8 chararacters";
+            }
+        }
+    </script>
+</body>
+</html>
