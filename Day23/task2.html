@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myparagraph">This is a paragraph</h1>
+    <button id="colorbutton">Change color </button>
+    <script>
+        document.querySelector("#colorbutton").addEventListener("click",function() {
+            document.querySelector("#myparagraph").style.color = "Red";
+        });
+    </script>
+</body>
+</html>
