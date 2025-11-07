@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Change colors</h2>
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3">Button 3</button>
+    <script>
+        const buttons =  document.querySelectorAll("button");
+        buttons.forEach(button => {
+            button.addEventListener("click",()=>{
+                const randomcolor = "#" +Math.floor(Math.random() * 16777215).toString(16);
+                button.style.background = randomcolor;
+            });
+            
+        });
+    </script>
+    
+</body>
+</html>

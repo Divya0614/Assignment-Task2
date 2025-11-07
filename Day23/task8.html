@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>To do list</h2>
+    <input type="text" id="usertask" placeholder="Enter a user">
+    <button onclick="adduser()">Add</button>
+    <ul id="userlist"></ul>
+    <script>
+        function adduser(){
+            let usertask = document.getElementById("usertask");
+            let userlist = document.getElementById("userlist");
+
+            if(usertask.value.trim()==""){
+                alert("please emter a username");
+                return;
+            }
+            let li = document.createElement("li");
+            li.textContent = usertask.value;
+
+            let removebtn = document.createElement("button");
+            removebtn.textContent="Remove";
+           
+
+            removebtn.onclick = function(){
+                userlist.removeChild(li);
+
+            };
+            li.appendChild(removebtn);
+            userlist.appendChild(li);
+
+            usertask.value = "";
+        }
+    </script>
+</body>
+</html>

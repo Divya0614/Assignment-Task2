@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Live text</h2>
+    <input type="text" id="userinput" placeholder="Name">
+    <p id="text">Text appear here</p>
+    <script>
+        const inputField = document.getElementById("userinput");
+
+        const text = document.getElementById("text");
+        inputField.addEventListener("input",function(){
+            text.textContent = inputField.value || "Your text appear here";
+        });
+    </script>
+</body> 
+</html>
