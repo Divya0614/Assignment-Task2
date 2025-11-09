@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="text">Change color</h3>
+    <button onclick="changecolor()">Change color</button>
+    <script>
+        function changecolor() {
+            try {
+                const element = document.getElementById("text");
+                if(!element) {
+                    throw new Error("Element not found");
+                    
+                }
+                element.style.color = "blue";
+            } catch (error) {
+                console.error("Error",error.message);
+                alert("Something went wrong" + error.message);
+                
+            }
+        }
+    </script>
+</body>
+</html>

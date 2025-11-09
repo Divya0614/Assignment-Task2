@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Calculator</h2>
+    <label>Enter Number 1</label><br>
+    <input type="number" id="num1"><br><br>
+    <label>Enter number 2</label><br>
+    <input type="number" id="num2"><br><br>
+    <label>Enter Number 3</label><br>
+    <input type="number" id="num3"><br><br>
+    <label>Select Operation</label><br>
+    <select id="operator">
+        <option value="+">Add (+)</option>
+        <option value="" -">Substract (-)</option>
+        <option value="*">Multiply(*)</option>
+        <option value="/">Divide (/)</option>
+    </select><br><br>
+
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+    <script>
+        function calculate() {
+            const num1 = Number(document.getElementById("num1").value);
+            const num2 = Number(document.getElementById("num2").value);
+            const operator = document.getElementById("operator").value;
+            const result = document.getElementById("result");
+
+            try {
+                let output;
+                if (operator === "/" && num2 === 0) {
+                    throw new Error("CANNOT DIVIDE BY ZERO");
+
+                }
+                switch (operator) {
+                    case "+": output = num1 + num2; break;
+                    case "-": output = num1 - num2; break;
+                    case "*": output = num1 * num2; break;
+                    case "/": output = num1 / num2; break;
+                    default: throw new Error("Invalid operator");
+
+                }
+                result.textContent = "Result" + output;
+
+            } catch (error) {
+                result.textContent = "Error:" + error.message;
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

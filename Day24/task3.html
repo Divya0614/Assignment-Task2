@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Type ur details</h3>
+    <form id="userform">
+        <input type="text" id="userinput" placeholder="typehere">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="display"></p>
+    <script>
+        const form =  document.getElementById("userform");
+        const input = document.getElementById("userinput");
+        const display= document.getElementById("display");
+
+        input.addEventListener("input", function() {
+            display.textContent= input.value;
+        });
+        form.addEventListener("submit",function(event) {
+            event.preventDefault();
+            display.textContent = input.value;
+        });
+    </script>
+</body>
+</html>

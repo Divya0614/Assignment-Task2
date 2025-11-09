@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Form Validation</h2>
+    <form id="userform"">
+        <label>Name</label><br>
+        <input type="text" id="name" placeholder="Tyep here"><br><br>
+        <label>Email</label><br>
+        <input type="text" id="Email" placeholder="Type here"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="result"></p>
+    <script>
+        const form = document.getElementById("userform")
+        const result =  document.getElementById("result");
+
+        form.addEventListener("submit",function(event) {
+            event.preventDefault();
+
+            try {
+                const name = document.getElementById("name").value.trim();
+                const Email = document.getElementById("Email").value.trim();
+
+                if (name === "") {
+                    throw new Error("Nmae cant be empty");
+                    
+                }
+                if (!Email.includes("@")) {
+                    throw new Error("Invalid email");
+                }
+                result.textContent =  "Form submitted";
+            } catch (error) {
+                result.textContent= error.message;
+            }
+        });
+    </script>
+</body>
+</html>

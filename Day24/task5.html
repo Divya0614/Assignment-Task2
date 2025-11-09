@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Enter a number</h4>
+    <input type="text" id="userinput" placeholder="Type here">
+    <button onclick="checkNumber()">Click here</button>
+    <p id="result"></p>
+    <script>
+        function checkNumber() {
+            const num = Number(document.getElementById("userinput").value);
+            const result = document.getElementById("result");
+
+            try {
+                if (num<0) {
+                    throw new Error("Negative no are not allowed");
+                    
+                }
+                result.textContent = num;
+            } catch (error) {
+                result.textContent = error.message;
+            }
+        }
+    </script>
+</body>
+</html>

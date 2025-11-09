@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Login Form</title>
+</head>
+<body>
+  <h2>Secure Login Form</h2>
+
+  <form id="loginForm">
+    <label>Email:</label>
+    <input type="text" id="email" placeholder="Enter email"><br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password" placeholder="Enter password"><br><br>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      const message = document.getElementById("message");
+
+      try {
+      
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        
+        if (!email.includes("@")) {
+          throw new Error("Invalid email format");
+        }
+        if (password.length < 6) {
+          throw new Error("Password must be at least 6 characters long");
+        }
+
+       
+        message.style.color = "green";
+        message.textContent = "Login successful!";
+
+      } catch (error) {
+        
+        message.style.color = "red";
+        message.textContent = "Error: " + error.message;
+        console.error("Login Error:", error.message);
+      }
+    });
+  </script>
+</body>
+</html>
