@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="Enter name">
+    <input type="email" id="email" placeholder="Enter email">
+    <button onclick="validateForm()">Submit</button>
+    <p id="error"></p>
+    <p id="success"></p>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const errorMsg = document.getElementById("error");
+            const successMsg = document.getElementById("success");
+
+            errorMsg.textContent = "";
+            successMsg.textContent = "";
+
+            try {
+                if (name === "") {
+                    throw new Error("Name field can't be empty");
+                }
+                if (email === "") {
+                    throw new Error("Email can't be empty");
+                }
+                if (!email.includes("@")) {
+                    throw new Error("Please enter a valid email");
+                }
+                successMsg.textContent = "Form submitted successfully!";
+            } catch (error) {
+                errorMsg.textContent = "Error: " + error.message;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile Info</title>
+</head>
+<body>
+  <h2>GitHub Profile Data</h2>
+  <p id="login"></p>
+  <p id="repos"></p>
+
+  <script>
+    async function getgithubProfile() {
+      try {
+        const response = await fetch("https://api.github.com/users/Divya0614");
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+       
+        document.getElementById("login").innerText = `Username: ${data.login}`;
+        document.getElementById("repos").innerText = `Public Repositories: ${data.public_repos}`;
+      } 
+      catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    getgithubProfile();
+  </script>
+</body>
+</html>
