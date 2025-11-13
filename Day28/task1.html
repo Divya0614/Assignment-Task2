@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Local storage</h4>
+    <label>Name:</label>
+    <input id="name"><br><br>
+    <label>Course:</label>
+    <input id="course"><br><br>
+    <button onclick="saveData()">Save</button>
+    <p id="output"></p>
+    <script>
+        window.onload = () => {
+            const n = localStorage.getItem("name");
+            const c = localStorage.getItem("course");
+            if (n && c) document.getElementById("output").textContent = `Welcome back ${n}! Your course: ${c}`;
+
+        };
+        function saveData() {
+            const name = document.getElementById("name").value;
+            const course = document.getElementById("course").value;
+            localStorage.setItem("name",name);
+            localStorage.setItem("course",course);
+            document.getElementById("output").textContent = `Data saved! Hello ${name}, enrolled in ${course}.`;
+        }
+        
+    </script>
+</body>
+</html>

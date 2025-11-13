@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Example</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <h2>jQuery Example</h2>
+    <div id="box"></div>
+
+
+    <button id="colorBtn">Change Color</button>
+    <button id="movebtn">Move Right</button>
+
+    <p id="message"></p>
+
+    <script>
+       
+        $(document).ready(function () {
+            
+            $("#colorBtn").click(function () {
+                $("#box").css("background-color", "lightgreen");
+                $("#message").text("Color changed to green!").css("color", "blue");
+            });
+
+            $("#movebtn").click(function() {
+                $("#box").animate({left:'+=150px'},800);
+                $("#message").text("Box moved left").css("color","red");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
