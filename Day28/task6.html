@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show User Location</title>
+</head>
+<body>
+
+<h2>Your Current Location</h2>
+<p id="status">Click the button to get your location.</p>
+<button id="locBtn">Get Location</button>
+
+<script>
+    document.getElementById("locBtn").addEventListener("click", function () {
+
+        
+        if (!navigator.geolocation) {
+            document.getElementById("status").textContent = 
+                "Geolocation is not supported by your browser.";
+            return;
+        }
+
+        
+        navigator.geolocation.getCurrentPosition(success, error);
+
+        function success(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            document.getElementById("status").innerHTML = 
+                "Latitude: " + latitude + "<br>Longitude: " + longitude;
+        }
+
+        function error() {
+            document.getElementById("status").textContent = 
+                "Unable to retrieve your location.";
+        }
+    });
+</script>
+
+</body>
+</html>

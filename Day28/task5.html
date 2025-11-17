@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console Experiment</title>
+</head>
+<body>
+
+<h2>Console Experiment</h2>
+<button id="testBtn">Run Console Test</button>
+
+<script>
+    const students = [
+        { name: "Divya", age: 22, course: "Web Dev" },
+        { name: "Asha", age: 23, course: "Python" },
+        { name: "Ravi", age: 24, course: "Data Science" }
+    ];
+
+    document.getElementById("testBtn").addEventListener("click", function () {
+
+    
+        console.log("Logging students array:", students);
+
+       
+        console.table(students);
+
+       
+        debugger;  
+
+        let totalAge = 0;
+        students.forEach(s => totalAge += s.age);
+
+        console.log("Total age:", totalAge);
+    });
+</script>
+
+</body>
+</html>

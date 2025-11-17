@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Up & Down</title>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <h3 id="box" style="width:200px; padding:20px; background:#f0a;">This is a sliding box</h3>
+
+    <button id="slideBtn">Slide Up / Down</button>
+
+    <script>
+        $("#slideBtn").click(function () {
+            $("#box").slideToggle(500); 
+        });
+    </script>
+
+</body>
+</html>

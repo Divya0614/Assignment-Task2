@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Fade-In</title>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 150vh; /* TEMP — allows scrolling */
+        }
+
+        .section {
+            width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f3f3f3;
+            border-radius: 10px;
+            opacity: 0; 
+            transform: translateY(50px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">My Portfolio</h1>
+
+    <div class="section">About Me Section</div>
+    <div class="section">Skills Section</div>
+    <div class="section">Projects Section</div>
+
+    <script>
+
+        
+        $(document).ready(function () {
+            $(window).trigger("scroll");
+        });
+
+        
+        $(window).on("scroll", function () {
+            $(".section").each(function () {
+                let elementTop = $(this).offset().top;
+                let windowBottom = $(window).scrollTop() + $(window).height();
+
+                if (windowBottom > elementTop + 50) {
+                    $(this).animate({
+                        opacity: 1,
+                        marginTop: "0px"
+                    }, 600);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save User Location</title>
+</head>
+<body>
+
+<h2>Your Current Location</h2>
+
+<p id="status">Click “Get Location” to see your coordinates.</p>
+
+<button id="locBtn">Get Location</button>
+<button id="saveBtn" disabled>Save Location</button>
+
+<script>
+    let currentLocation = null;
+
+    document.getElementById("locBtn").addEventListener("click", function () {
+
+        if (!navigator.geolocation) {
+            document.getElementById("status").textContent =
+                "Geolocation is not supported by your browser.";
+            return;
+        }
+
+        navigator.geolocation.getCurrentPosition(success, error);
+
+        function success(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            currentLocation = { latitude, longitude }; // store in variable
+
+            document.getElementById("status").innerHTML =
+                "Latitude: " + latitude + "<br>Longitude: " + longitude;
+
+        
+            document.getElementById("saveBtn").disabled = false;
+        }
+
+        function error() {
+            document.getElementById("status").textContent =
+                "Unable to retrieve your location.";
+        }
+    });
+
+    
+    document.getElementById("saveBtn").addEventListener("click", function () {
+        if (currentLocation) {
+            localStorage.setItem("userLocation", JSON.stringify(currentLocation));
+            alert("Location saved in localStorage!");
+        }
+    });
+
+</script>
+
+</body>
+</html>

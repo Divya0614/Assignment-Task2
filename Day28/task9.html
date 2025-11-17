@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refactored Example</title>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        input { padding: 5px; margin: 5px 0; }
+        button { padding: 7px 15px; margin-top: 10px; }
+        #output { margin-top: 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<h2>Refactored JavaScript Example</h2>
+
+<label>Name:</label><br>
+<input id="name" type="text"><br>
+
+<label>Age:</label><br>
+<input id="age" type="number"><br>
+
+<button id="btn">Submit</button>
+
+<p id="output"></p>
+
+<script>
+    
+
+   
+    function getInput(id) {
+        return document.getElementById(id).value;
+    }
+
+ 
+    function validateInputs(name, age) {
+        return name !== "" && age !== "";
+    }
+
+
+    function showMessage(name, age) {
+        document.getElementById("output").textContent =
+            `Hello ${name}, age ${age}`;
+    }
+
+    
+    document.getElementById("btn").addEventListener("click", function () {
+        const name = getInput("name");
+        const age = getInput("age");
+
+        if (!validateInputs(name, age)) {
+            alert("Enter all fields");
+            return;
+        }
+
+        showMessage(name, age);
+    });
+</script>
+
+</body>
+</html>

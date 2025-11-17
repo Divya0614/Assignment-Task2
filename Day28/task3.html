@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage JSON Example</title>
+</head>
+<body>
+
+<h3>Save Object to Local Storage</h3>
+<button id="saveBtn">Save Data</button>
+
+<script>
+    document.getElementById("saveBtn").addEventListener("click", function () {
+        
+       
+        const student = {
+            name: "Divya",
+            course: "Web Development",
+            year: 2025
+        };
+
+        
+        const jsonData = JSON.stringify(student);
+
+     
+        localStorage.setItem("studentData", jsonData);
+
+        alert("Object saved successfully in localStorage!");
+    });
+</script>
+
+</body>
+</html>

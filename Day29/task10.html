@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Toggler</title>
+
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        #answer {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #e2ffe2;
+            border-left: 4px solid green;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Simple Quiz</h2>
+    <p><strong>Q:</strong> What does HTML stand for?</p>
+
+    <button id="showBtn">Show Answer</button>
+    <button id="hideBtn">Hide Answer</button>
+
+    <div id="answer">
+        <strong>A:</strong> HyperText Markup Language
+    </div>
+
+    <script>
+        $("#showBtn").click(function () {
+            $("#answer").show();
+        });
+
+        $("#hideBtn").click(function () {
+            $("#answer").hide();
+        });
+    </script>
+
+</body>
+</html>

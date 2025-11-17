@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Time Example</title>
+</head>
+<body>
+
+<h3>Session Time Stored</h3>
+<p id="msg"></p>
+
+<script>
+    const sessionTime = new Date().toLocaleString();
+
+  
+    sessionStorage.setItem("loginTime", sessionTime);
+
+    
+    document.getElementById("msg").textContent = 
+        "Your session started at: " + sessionStorage.getItem("loginTime");
+</script>
+
+</body>
+</html>

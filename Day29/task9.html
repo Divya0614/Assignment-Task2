@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Fade-In</title>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .section {
+            width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f3f3f3;
+            border-radius: 10px;
+
+          
+            opacity: 0;
+            transform: translateY(30px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">My Portfolio</h1>
+
+    <div class="section">About Me Section</div>
+    <div class="section">Skills Section</div>
+    <div class="section">Projects Section</div>
+    <div class="section">Contact Section</div>
+
+    <script>
+        $(document).ready(function () {
+            $(".section").each(function (index) {
+                $(this).delay(200 * index).animate({
+                    opacity: 1,
+                    top: 0,
+                    marginTop: "0px",
+                    transform: "none"
+                }, 600);
+            });
+        });
+    </script>
+
+</body>
+</html>

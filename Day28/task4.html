@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read JSON Example</title>
+</head>
+<body>
+
+<h3>Read and Log JSON Data</h3>
+<button id="readBtn">Read Data</button>
+
+<script>
+    document.getElementById("readBtn").addEventListener("click", function () {
+
+        const jsonData = localStorage.getItem("studentData");
+
+        const obj = JSON.parse(jsonData);
+
+        console.log("Saved Object:", obj);
+
+        alert("Check console — data has been logged!");
+    });
+</script>
+
+</body>
+</html>
