@@ -1,0 +1,12 @@
+use day4db;
+
+DELIMITER $$
+
+CREATE FUNCTION total_price(qty INT, price DECIMAL(10,2))
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+BEGIN
+    RETURN qty * price;
+END $$
+
+DELIMITER ;

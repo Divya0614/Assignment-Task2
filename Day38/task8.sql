@@ -1,0 +1,12 @@
+use day4db;
+
+DELIMITER $$
+
+CREATE FUNCTION calc_tax(p_price DECIMAL(10,2))
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+BEGIN
+    RETURN p_price * 0.18;  -- 18% GST
+END $$
+
+DELIMITER ;
